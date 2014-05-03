@@ -15,6 +15,113 @@
   height: 2px;
 }
 
+#nprogress .bar[data-progress] {
+	transition: all 200ms ease;  
+	-webkit-transition: all 200ms ease;
+}
+#nprogress .bar[data-progress="0"] {-webkit-transform: translate3d(-100%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="1"] {-webkit-transform: translate3d(-99%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="2"] {-webkit-transform: translate3d(-98%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="3"] {-webkit-transform: translate3d(-97%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="4"] {-webkit-transform: translate3d(-96%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="5"] {-webkit-transform: translate3d(-95%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="6"] {-webkit-transform: translate3d(-94%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="7"] {-webkit-transform: translate3d(-93%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="8"] {-webkit-transform: translate3d(-92%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="9"] {-webkit-transform: translate3d(-91%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="9"] {-webkit-transform: translate3d(-91%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="10"] {-webkit-transform: translate3d(-90%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="11"] {-webkit-transform: translate3d(-89%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="12"] {-webkit-transform: translate3d(-88%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="13"] {-webkit-transform: translate3d(-87%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="14"] {-webkit-transform: translate3d(-86%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="15"] {-webkit-transform: translate3d(-85%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="16"] {-webkit-transform: translate3d(-84%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="17"] {-webkit-transform: translate3d(-83%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="18"] {-webkit-transform: translate3d(-82%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="19"] {-webkit-transform: translate3d(-81%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="20"] {-webkit-transform: translate3d(-80%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="21"] {-webkit-transform: translate3d(-79%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="22"] {-webkit-transform: translate3d(-78%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="23"] {-webkit-transform: translate3d(-77%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="24"] {-webkit-transform: translate3d(-76%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="25"] {-webkit-transform: translate3d(-75%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="26"] {-webkit-transform: translate3d(-74%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="27"] {-webkit-transform: translate3d(-73%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="28"] {-webkit-transform: translate3d(-72%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="29"] {-webkit-transform: translate3d(-71%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="30"] {-webkit-transform: translate3d(-70%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="31"] {-webkit-transform: translate3d(-69%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="32"] {-webkit-transform: translate3d(-68%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="33"] {-webkit-transform: translate3d(-67%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="34"] {-webkit-transform: translate3d(-66%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="35"] {-webkit-transform: translate3d(-65%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="36"] {-webkit-transform: translate3d(-64%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="37"] {-webkit-transform: translate3d(-63%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="38"] {-webkit-transform: translate3d(-62%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="39"] {-webkit-transform: translate3d(-61%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="40"] {-webkit-transform: translate3d(-60%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="41"] {-webkit-transform: translate3d(-59%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="42"] {-webkit-transform: translate3d(-58%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="43"] {-webkit-transform: translate3d(-57%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="44"] {-webkit-transform: translate3d(-56%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="45"] {-webkit-transform: translate3d(-55%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="46"] {-webkit-transform: translate3d(-54%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="47"] {-webkit-transform: translate3d(-53%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="48"] {-webkit-transform: translate3d(-52%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="49"] {-webkit-transform: translate3d(-51%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="50"] {-webkit-transform: translate3d(-50%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="51"] {-webkit-transform: translate3d(-49%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="52"] {-webkit-transform: translate3d(-48%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="53"] {-webkit-transform: translate3d(-47%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="54"] {-webkit-transform: translate3d(-46%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="55"] {-webkit-transform: translate3d(-45%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="56"] {-webkit-transform: translate3d(-44%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="57"] {-webkit-transform: translate3d(-43%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="58"] {-webkit-transform: translate3d(-42%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="59"] {-webkit-transform: translate3d(-41%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="60"] {-webkit-transform: translate3d(-40%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="61"] {-webkit-transform: translate3d(-39%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="62"] {-webkit-transform: translate3d(-38%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="63"] {-webkit-transform: translate3d(-37%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="64"] {-webkit-transform: translate3d(-36%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="65"] {-webkit-transform: translate3d(-35%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="66"] {-webkit-transform: translate3d(-34%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="67"] {-webkit-transform: translate3d(-33%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="68"] {-webkit-transform: translate3d(-32%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="69"] {-webkit-transform: translate3d(-31%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="70"] {-webkit-transform: translate3d(-30%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="71"] {-webkit-transform: translate3d(-29%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="72"] {-webkit-transform: translate3d(-28%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="73"] {-webkit-transform: translate3d(-27%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="74"] {-webkit-transform: translate3d(-26%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="75"] {-webkit-transform: translate3d(-25%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="76"] {-webkit-transform: translate3d(-24%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="77"] {-webkit-transform: translate3d(-23%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="78"] {-webkit-transform: translate3d(-22%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="79"] {-webkit-transform: translate3d(-21%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="80"] {-webkit-transform: translate3d(-20%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="81"] {-webkit-transform: translate3d(-19%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="82"] {-webkit-transform: translate3d(-18%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="83"] {-webkit-transform: translate3d(-17%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="84"] {-webkit-transform: translate3d(-16%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="85"] {-webkit-transform: translate3d(-15%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="86"] {-webkit-transform: translate3d(-14%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="87"] {-webkit-transform: translate3d(-13%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="88"] {-webkit-transform: translate3d(-12%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="89"] {-webkit-transform: translate3d(-11%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="90"] {-webkit-transform: translate3d(-10%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="91"] {-webkit-transform: translate3d(-9%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="92"] {-webkit-transform: translate3d(-8%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="93"] {-webkit-transform: translate3d(-7%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="94"] {-webkit-transform: translate3d(-6%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="95"] {-webkit-transform: translate3d(-5%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="96"] {-webkit-transform: translate3d(-4%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="97"] {-webkit-transform: translate3d(-3%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="98"] {-webkit-transform: translate3d(-2%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="99"] {-webkit-transform: translate3d(-1%, 0px, 0px) !important; }
+#nprogress .bar[data-progress="100"] {-webkit-transform: translate3d(-0%, 0px, 0px) !important; }
+
 /* Fancy blur effect */
 #nprogress .peg {
   display: block;

@@ -1,5 +1,6 @@
 /*! NProgress (c) 2013, Rico Sta. Cruz
- *  http://ricostacruz.com/nprogress */
+ * Adapted by rsevil: https://github.com/rsevil/nprogress
+ * http://ricostacruz.com/nprogress */
 
 ;(function(factory) {
 
@@ -18,8 +19,6 @@
 
   var Settings = NProgress.settings = {
     minimum: 0.08,
-    easing: 'ease',
-    positionUsing: '',
     speed: 200,
     trickle: true,
     trickleRate: 0.02,
@@ -68,19 +67,13 @@
 
     var progress = NProgress.render(!started),
         bar      = progress.querySelector(Settings.barSelector),
-        speed    = Settings.speed,
-        ease     = Settings.easing;
-
-    progress.offsetWidth; /* Repaint */
+        speed    = Settings.speed;
 
     queue(function(next) {
-      // Set positionUsing if it hasn't already been set
-      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+	  // set progress un attribute, css must handle what to do with progress
+	  bar.setAttribute('data-progress', toBarPerc(n));
 
-      // Add transition
-      css(bar, barPositionCSS(n, speed, ease));
-
-      if (n === 1) {
+      if (n >= 1) {
         // Fade out
         css(progress, { 
           transition: 'none', 
@@ -217,21 +210,17 @@
 
   NProgress.render = function(fromStart) {
     if (NProgress.isRendered()) return document.getElementById('nprogress');
-
-    addClass(document.documentElement, 'nprogress-busy');
     
     var progress = document.createElement('div');
     progress.id = 'nprogress';
     progress.innerHTML = Settings.template;
-
+	
     var bar      = progress.querySelector(Settings.barSelector),
-        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
+        perc     = fromStart ? '0' : toBarPerc(NProgress.status || 0),
         spinner;
-    
-    css(bar, {
-      transition: 'all 0 linear',
-      transform: 'translate3d(' + perc + '%,0,0)'
-    });
+		
+    if (perc)
+		bar.setAttribute("data-progress",perc);
 
     if (!Settings.showSpinner) {
       spinner = progress.querySelector(Settings.spinnerSelector);
@@ -247,7 +236,6 @@
    */
 
   NProgress.remove = function() {
-    removeClass(document.documentElement, 'nprogress-busy');
     var progress = document.getElementById('nprogress');
     progress && removeElement(progress);
   };
@@ -258,32 +246,6 @@
 
   NProgress.isRendered = function() {
     return !!document.getElementById('nprogress');
-  };
-
-  /**
-   * Determine which positioning CSS rule to use.
-   */
-
-  NProgress.getPositioningCSS = function() {
-    // Sniff on document.body.style
-    var bodyStyle = document.body.style;
-
-    // Sniff prefixes
-    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
-                       ('MozTransform' in bodyStyle) ? 'Moz' :
-                       ('msTransform' in bodyStyle) ? 'ms' :
-                       ('OTransform' in bodyStyle) ? 'O' : '';
-
-    if (vendorPrefix + 'Perspective' in bodyStyle) {
-      // Modern browsers with 3D support, e.g. Webkit, IE10
-      return 'translate3d';
-    } else if (vendorPrefix + 'Transform' in bodyStyle) {
-      // Browsers without 3D support, e.g. IE9
-      return 'translate';
-    } else {
-      // Browsers without translate() support, e.g. IE7-8
-      return 'margin';
-    }
   };
 
   /**
@@ -302,29 +264,7 @@
    */
 
   function toBarPerc(n) {
-    return (-1 + n) * 100;
-  }
-
-
-  /**
-   * (Internal) returns the correct CSS for changing the bar's
-   * position given an n percentage, and speed and ease from Settings
-   */
-
-  function barPositionCSS(n, speed, ease) {
-    var barCSS;
-
-    if (Settings.positionUsing === 'translate3d') {
-      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
-    } else if (Settings.positionUsing === 'translate') {
-      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
-    } else {
-      barCSS = { 'margin-left': toBarPerc(n)+'%' };
-    }
-
-    barCSS.transition = 'all '+speed+'ms '+ease;
-
-    return barCSS;
+    return Math.round((n) * 100);
   }
 
   /**
@@ -407,56 +347,6 @@
   })();
 
   /**
-   * (Internal) Determines if an element or space separated list of class names contains a class name.
-   */
-
-  function hasClass(element, name) {
-    var list = typeof element == 'string' ? element : classList(element);
-    return list.indexOf(' ' + name + ' ') >= 0;
-  }
-
-  /**
-   * (Internal) Adds a class to an element.
-   */
-
-  function addClass(element, name) {
-    var oldList = classList(element),
-        newList = oldList + name;
-
-    if (hasClass(oldList, name)) return; 
-
-    // Trim the opening space.
-    element.className = newList.substring(1);
-  }
-
-  /**
-   * (Internal) Removes a class from an element.
-   */
-
-  function removeClass(element, name) {
-    var oldList = classList(element),
-        newList;
-
-    if (!hasClass(element, name)) return;
-
-    // Replace the class name.
-    newList = oldList.replace(' ' + name + ' ', ' ');
-
-    // Trim the opening and closing spaces.
-    element.className = newList.substring(1, newList.length - 1);
-  }
-
-  /**
-   * (Internal) Gets a space separated list of the class names on the element. 
-   * The list is wrapped with a single space on each end to facilitate finding 
-   * matches within the list.
-   */
-
-  function classList(element) {
-    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
-  }
-
-  /**
    * (Internal) Removes an element from the DOM.
    */
 
@@ -466,4 +356,3 @@
 
   return NProgress;
 });
-
